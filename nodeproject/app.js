@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-var port = process.env.PORT;
+var port = process.env.PORT || 8080;
 
 //Roda o que está no diretório "public" do projeto
 app.use(express.static('public'));
@@ -13,14 +13,6 @@ app.use(express.static('src/views'));
 //E mude os caminhos nos arquivos que utilizam os caminhos antigos dos pacotes
 //que agora são gerenciados pelo Bower
 app.use(express.static('bower_components'));
-
-app.get('/',function(req,res){
-    res.send('Ola Mundo de novo!');
-});
-
-app.get('/routing',function(req,res){
-    res.send('Em Roteamento!');
-});
 
 app.listen(port,function(err){
    console.log("O Servidor esta sendo executado na porta...: " + port); 
