@@ -6,7 +6,7 @@
     "Gabriel Simas <autorgabrielsimas@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/gabrielsimas/nodeproject",
   "ignore": [
     "**/.*",
     "node_modules",
